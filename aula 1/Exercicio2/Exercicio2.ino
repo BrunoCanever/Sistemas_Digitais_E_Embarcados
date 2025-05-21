@@ -12,7 +12,7 @@ void setup() {
 }
 
 void loop() {
-  if (Serial.available() == 1 ){ //se eu tenho algo disponivelna serial
+  if (Serial.available() == 1 ){ //se eu tenho algo disponivel na serial
     char i = Serial.read(); //ler o valor da serial e armazena em i
     Serial.println(i); //mostra no Serial Monitor o que esta na serial
     
