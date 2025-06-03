@@ -6,30 +6,30 @@
 #define pbotao2 3  //defininfo que o pino 3 se chama pbotao2
 
 void setup() {
-  pinMode(pin_led1, OUTPUT);
-  pinMode(pin_led2, OUTPUT);
-  pinMode(pin_led3, OUTPUT);
-  pinMode(pin_led4, OUTPUT);
-  pinMode(pin_botao1, INPUT);
-  pinMode(pin_botao2, INPUT);
+  pinMode(pin_led1, OUTPUT);    //definindo p1 como OUTPUT
+  pinMode(pin_led2, OUTPUT);    //definindo p2 como OUTPUT
+  pinMode(pin_led3, OUTPUT);    //definindo p3 como OUTPUT
+  pinMode(pin_led4, OUTPUT);    //definindo p4 como OUTPUT
+  pinMode(pin_botao1, INPUT);   //define pbotao1 como INPUT
+  pinMode(pin_botao2, INPUT);   //define pbotao2 como INPUT
 }
 
 void loop() {
-  bool botaoA = digitalRead(pin_botao1);
-  bool botaoB = digitalRead(pin_botao2);
-  if ((botaoA == 1) && (botaoB == 1)) {
-    digitalWrite(pin_led1, 1);
-  } else{
-    digitalWrite(pin_led1,0);
+  bool botaoA = digitalRead(pbotao1);   //define que o botaoA é igual ao digitalRead do pbotao1
+  bool botaoB = digitalRead(pbotao2);   //define que o botaoB é igual ao digitalRead do pbotao2
+  if ((botaoA == 1) && (botaoB == 1)) {  //se botaoA e botaoB sao AUTO entao
+    digitalWrite(p1, 1);  //p1 igual a AUTO
+  } else{    //se nao
+    digitalWrite(p1,0);   //p1 igual a BAIXO
   }
-  if ((botaoA == 1) || (botaoB == 1)) {
-    digitalWrite(pin_led2, 1);
-  } else{
-    digitalWrite(pin_led2,0);
+  if ((botaoA == 1) || (botaoB == 1)) {  //se botaoA ou botaoB sao AUTO entao
+    digitalWrite(p2, 1);  //p2 igual a AUTO
+  } else{    //se nao
+    digitalWrite(p2,0);   //p2 igual a BAIXO
   }
-  if ((botaoA == 1) ^ (botaoB == 1)) {
-    digitalWrite(pin_led3, 1);
-  } else{
-    digitalWrite(pin_led3,0);
+  if ((botaoA == 1) ^ (botaoB == 1)) {  //se botaoA xor botaoB sao AUTO entao
+    digitalWrite(p3, 1);  //p3 igual a AUTO
+  } else{    //se nao
+    digitalWrite(p3,0);   //p3 igual a BAIXO
   }
 }
