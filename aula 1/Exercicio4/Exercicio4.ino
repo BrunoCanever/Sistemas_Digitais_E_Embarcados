@@ -6,12 +6,12 @@
 #define pbotao2 3  //defininfo que o pino 3 se chama pbotao2
 
 void setup() {
-  pinMode(pin_led1, OUTPUT);    //definindo p1 como OUTPUT
-  pinMode(pin_led2, OUTPUT);    //definindo p2 como OUTPUT
-  pinMode(pin_led3, OUTPUT);    //definindo p3 como OUTPUT
-  pinMode(pin_led4, OUTPUT);    //definindo p4 como OUTPUT
-  pinMode(pin_botao1, INPUT);   //define pbotao1 como INPUT
-  pinMode(pin_botao2, INPUT);   //define pbotao2 como INPUT
+  pinMode(p1, OUTPUT);    //definindo p1 como OUTPUT
+  pinMode(p2, OUTPUT);    //definindo p2 como OUTPUT
+  pinMode(p3, OUTPUT);    //definindo p3 como OUTPUT
+  pinMode(p4, OUTPUT);    //definindo p4 como OUTPUT
+  pinMode(pbotao1, INPUT);   //define pbotao1 como INPUT
+  pinMode(pbotao2, INPUT);   //define pbotao2 como INPUT
 }
 
 void loop() {
