@@ -35,7 +35,7 @@ void loop() {
   }
   ultimoA = estadoA;
 
-    estadoB = digitalRead(1otao2);
+    estadoB = digitalRead(pbotao2);
   if (estadoB != ultimoB){
     if (estadoB == 1){
       if (contador > 0){
