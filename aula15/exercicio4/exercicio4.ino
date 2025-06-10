@@ -53,7 +53,7 @@ void loop() {
     digitalWrite(p1,0);
   }
 
-  i =contador ;
+  i =cont;
 
   if (i == 2||i == 3||i == 6||i == 7||i == 10||i == 11||i == 14||i == 15){
     digitalWrite(p2, 1);
