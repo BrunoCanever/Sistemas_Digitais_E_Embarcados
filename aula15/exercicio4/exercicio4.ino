@@ -5,11 +5,11 @@
 #define p3 10
 #define p4 11
 
-int contador = 0;
-bool ultimoA = 0;
-bool ultimoB = 0;
-bool estadoA = 0;
-bool estadoB = 0;
+int cont = 0;
+bool ultA = 0;
+bool ultB = 0;
+bool estA = 0;
+bool estB = 0;
 int i = 0;
 
 
@@ -24,29 +24,29 @@ void setup() {
 }
 
 void loop() {
-  estadoA = digitalRead(pbotao1);
-  if (estadoA != ultimoA){
-    if (estadoA == 1){
-      if (contador < 15){
-        contador++;
-        Serial.println(contador);
+  estA = digitalRead(pbotao1);
+  if (estA != ultA){
+    if (estA == 1){
+      if (cont < 15){
+        cont++;
+        Serial.println(cont);
       }
     }
   }
-  ultimoA = estadoA;
+  ultA = estA;
 
-    estadoB = digitalRead(pbotao2);
-  if (estadoB != ultimoB){
-    if (estadoB == 1){
-      if (contador > 0){
-        contador--;
-        Serial.println(contador);
+    estB = digitalRead(pbotao2);
+  if (estB != ultoB){
+    if (estB == 1){
+      if (cont > 0){
+        cont--;
+        Serial.println(cont);
       }
     }
   }
-  ultimoB = estadoB;
+  ultB = estB;
 
-  if (contador % 2 == 1 || contador == 1){
+  if (cont % 2 == 1 || cont == 1){
     digitalWrite(p1, 1);
   }
   else{
@@ -62,14 +62,14 @@ void loop() {
     digitalWrite(p2,0);
   }
 
-  if ((contador / 4 >= 1 && contador / 4 < 2) || contador / 4 >=3 ){
+  if ((cont / 4 >= 1 && cont / 4 < 2) || cont / 4 >=3 ){
     digitalWrite(p3, 1);
   }
   else{
     digitalWrite(p3,0);
   }
 
-  if (contador>=8){
+  if (cont>=8){
     digitalWrite(p4, 1);
   }
   else{
