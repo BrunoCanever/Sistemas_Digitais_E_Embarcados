@@ -36,7 +36,7 @@ void loop() {
   ultA = estA;
 
     estB = digitalRead(pbotao2);
-  if (estB != ultoB){
+  if (estB != ultB){
     if (estB == 1){
       if (cont > 0){
         cont--;
